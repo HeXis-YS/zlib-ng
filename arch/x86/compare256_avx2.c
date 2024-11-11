@@ -3,13 +3,12 @@
  * For conditions of distribution and use, see copyright notice in zlib.h
  */
 
+#if defined(X86_AVX2) && defined(HAVE_BUILTIN_CTZ)
+
 #include "zbuild.h"
 #include "zutil_p.h"
 #include "deflate.h"
 #include "fallback_builtins.h"
-
-#if defined(X86_AVX2) && defined(HAVE_BUILTIN_CTZ)
-
 #include <immintrin.h>
 #ifdef _MSC_VER
 #  include <nmmintrin.h>

@@ -2,9 +2,9 @@
  * For conditions of distribution and use, see copyright notice in zlib.h
  */
 
-#include "zbuild.h"
+#ifdef X86_SSSE3
 
-#if defined(X86_SSSE3)
+#include "zbuild.h"
 #include <immintrin.h>
 #include "../generic/chunk_permute_table.h"
 
